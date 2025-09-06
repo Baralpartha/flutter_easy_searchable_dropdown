@@ -29,7 +29,7 @@ class _DropdownDemoState extends State<DropdownDemo> {
     final items = List.generate(50, (i) => 'Item $i');
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Dropdown Demo')),
+      appBar: AppBar(title: const Text('Dropdown Search')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: FlutterEasySearchableDropdown<String>(
