@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easy_searchable_dropdown/flutter_easy_searchable_dropdown.dart';
 
-/// Example app demonstrating FlutterEasySearchableDropdown usage.
 void main() => runApp(const MyApp());
 
-/// Root widget of the example app.
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -16,7 +14,6 @@ class MyApp extends StatelessWidget {
   );
 }
 
-/// A demo screen showing the searchable dropdown in action.
 class DropdownDemo extends StatefulWidget {
   const DropdownDemo({super.key});
 
@@ -29,10 +26,10 @@ class _DropdownDemoState extends State<DropdownDemo> {
 
   @override
   Widget build(BuildContext context) {
-    final items = List.generate(50, (i) => 'Item $i');
+    final items = List.generate(20, (i) => 'Item $i');
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Dropdown Search')),
+      appBar: AppBar(title: const Text('Dropdown Search Example')),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: FlutterEasySearchableDropdown<String>(
