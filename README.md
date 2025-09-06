@@ -8,6 +8,13 @@ A customizable and lightweight **searchable dropdown widget** for Flutter.
 Easily add a dropdown with built-in search functionality to your Flutter apps.
 
 ---
+## 🎨 Features
+
+- Lightweight and fast
+- Fully customizable appearance
+- Built-in search for quick selection
+- Supports dynamic (sync/async) data
+- Easy to integrate in any Flutter project
 
 ## 🚀 Installation
 
