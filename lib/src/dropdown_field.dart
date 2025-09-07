@@ -69,6 +69,7 @@ class _FlutterEasySearchableDropdownState<T>
     _overlayEntry = null;
   }
 
+
   OverlayEntry _createOverlay() {
     final renderBox = context.findRenderObject() as RenderBox;
     final size = renderBox.size;
