@@ -38,7 +38,7 @@ Add this line to your **pubspec.yaml**:
 
 ```yaml
 dependencies:
-  flutter_easy_searchable_dropdown: ^0.1.6
+  flutter_easy_searchable_dropdown: ^0.1.9
 
 ---
 

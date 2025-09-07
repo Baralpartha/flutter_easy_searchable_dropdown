@@ -1,34 +1,8 @@
 import 'package:flutter/material.dart';
 
 /// A customizable, lightweight, and easy-to-use **searchable dropdown widget**.
-///
-/// This widget provides:
-/// - A text field with built-in search functionality
-/// - A dropdown list that filters items as the user types
-/// - Optional clear button to reset selection
-/// - Fully customizable styles and icons
-///
-/// Example usage:
-///
-/// ```dart
-/// FlutterEasySearchableDropdown<String>(
-///   items: ["Apple", "Banana", "Mango", "Orange"],
-///   itemLabel: (item) => item,
-///   onChanged: (value) {
-///     debugPrint("Selected: $value");
-///   },
-/// )
-/// ```
 class FlutterEasySearchableDropdown<T> extends StatefulWidget {
-  final List<T> items;
-  final String Function(T) itemLabel;
-  final ValueChanged<T?> onChanged;
-  final String hintText;
-  final bool isClearable;
-  final TextStyle? textStyle;
-  final Widget? dropdownIcon;
-  final Widget? clearIcon;
-
+  /// Creates a new [FlutterEasySearchableDropdown].
   const FlutterEasySearchableDropdown({
     super.key,
     required this.items,
@@ -40,6 +14,30 @@ class FlutterEasySearchableDropdown<T> extends StatefulWidget {
     this.dropdownIcon,
     this.clearIcon,
   });
+
+  /// The list of items to display in the dropdown.
+  final List<T> items;
+
+  /// Converts each item into a displayable string.
+  final String Function(T) itemLabel;
+
+  /// Called when an item is selected or cleared.
+  final ValueChanged<T?> onChanged;
+
+  /// Placeholder text when nothing is selected.
+  final String hintText;
+
+  /// Whether clearing the selected value is allowed.
+  final bool isClearable;
+
+  /// The text style for the input field.
+  final TextStyle? textStyle;
+
+  /// The icon displayed for opening the dropdown.
+  final Widget? dropdownIcon;
+
+  /// The icon used to clear the selection.
+  final Widget? clearIcon;
 
   @override
   State<FlutterEasySearchableDropdown<T>> createState() =>
@@ -72,12 +70,15 @@ class _FlutterEasySearchableDropdownState<T>
   }
 
   OverlayEntry _createOverlay() {
-    final RenderBox renderBox = context.findRenderObject() as RenderBox;
+    final renderBox = context.findRenderObject() as RenderBox;
     final size = renderBox.size;
 
     final filteredItems = widget.items
-        .where((item) =>
-        widget.itemLabel(item).toLowerCase().contains(_searchQuery.toLowerCase()))
+        .where(
+          (item) => widget.itemLabel(item)
+          .toLowerCase()
+          .contains(_searchQuery.toLowerCase()),
+    )
         .toList();
 
     return OverlayEntry(
@@ -125,7 +126,6 @@ class _FlutterEasySearchableDropdownState<T>
       child: TextField(
         controller: _controller,
         style: widget.textStyle ?? Theme.of(context).textTheme.bodyMedium,
-        readOnly: false,
         decoration: InputDecoration(
           hintText: widget.hintText,
           suffixIcon: Row(

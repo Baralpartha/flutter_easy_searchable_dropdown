@@ -1,5 +1,5 @@
 # Changelog
 
-## 0.1.6
+## 0.1.9
 - Initial release
 - Added SearchableDropdown widget
