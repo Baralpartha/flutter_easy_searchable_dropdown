@@ -1,10 +1,9 @@
 # 📦 Flutter Easy Searchable Dropdown
 
-[![Pub Version](https://img.shields.io/pub/v/flutter_easy_searchable_dropdown.svg)](https://pub.dev/packages/flutter_easy_searchable_dropdown)
-[![License](https://img.shields.io/github/license/Baralpartha/flutter_easy_searchable_dropdown)](https://github.com/Baralpartha/flutter_easy_searchable_dropdown/blob/main/LICENSE)
+[![Pub Version](https://img.shields.io/pub/v/flutter_easy_searchable_dropdown.svg)](https://pub.dev/packages/flutter_easy_searchable_dropdown) [![License](https://img.shields.io/github/license/Baralpartha/flutter_easy_searchable_dropdown)](https://github.com/Baralpartha/flutter_easy_searchable_dropdown/blob/main/LICENSE)
 
-A **customizable and lightweight searchable dropdown widget** for Flutter.  
-Easily add a dropdown with built-in search functionality and optional clear button to your Flutter apps.
+A **customizable and lightweight searchable dropdown widget** for Flutter.
+Easily add a dropdown with built-in search functionality and an optional clear button to your Flutter apps.
 
 ---
 
@@ -12,52 +11,49 @@ Easily add a dropdown with built-in search functionality and optional clear butt
 
 The `FlutterEasySearchableDropdown` widget provides a **single-selection dropdown** with:
 
-- Searchable input field
-- Clearable selection
-- Fully customizable UI (text style, icons, hints)
-- Smooth overlay dropdown list
+* Searchable input field
+* Clearable selection
+* Fully customizable UI (text style, icons, hints)
+* Smooth overlay dropdown list
 
-Users can type in the search field to filter options dynamically. The overlay updates automatically as the search query changes. Selecting an item updates the input and triggers the `onChanged` callback.
+Users can type in the search field to filter options dynamically.
+Selecting an item updates the input and triggers the `onChanged` callback.
 
 ---
 
 ## 🎨 Features
 
-- Lightweight and fast
-- Fully customizable appearance (text style, border, icons)
-- Searchable dropdown for quick selection
-- Optional clear button to reset selection
-- Smooth overlay animations
-- Easy integration in any Flutter project
+* Lightweight and fast
+* Fully customizable appearance (text style, border, icons)
+* Searchable dropdown for quick selection
+* Optional clear button to reset selection
+* Smooth overlay animations
+* Easy integration in any Flutter project
 
 ---
 
 ## 🚀 Installation
 
-Add this line to your **pubspec.yaml**:
+Add the package to your **pubspec.yaml** dependencies:
 
 ```yaml
 dependencies:
-  flutter_easy_searchable_dropdown: ^0.1.9
+  flutter_easy_searchable_dropdown: ^0.1.10
+```
+
+Then run:
+
+```bash
+flutter pub get
+```
 
 ---
 
-## 📞 Contact
+## 📞 Contact & Support
 
-Maintained by **Partha Baral**.  
-For any issues, suggestions, or support, you can contact me via my website:
+**Maintained by [Partha Baral](https://partha.shohozbuy.com).**
 
-[https://partha.shohozbuy.com](https://partha.shohozbuy.com)
+For questions, feature requests, or support, please reach out via the website.
+You can also view the source code, report issues, or contribute on GitHub:
 
-You can also check the source code and report issues on GitHub:
-
-[GitHub Repository](https://github.com/Baralpartha/flutter_easy_searchable_dropdown)
-
-
-
-
-
-**Screenshots**
-
-![Screenshot_20250906_122002](https://github.com/user-attachments/assets/21b6d655-dcac-4435-bd64-ad45f5e5c174)
-
+**[GitHub Repository](https://github.com/Baralpartha/flutter_easy_searchable_dropdown)**
